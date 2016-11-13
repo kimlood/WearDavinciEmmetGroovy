@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="davincidaemon-1.0.3">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/mobile/build/intermediates/exploded-aar/com.github.florent37/davincidaemon/1.0.3/res" />
+      <root url="jar://$PROJECT_DIR$/mobile/build/intermediates/exploded-aar/com.github.florent37/davincidaemon/1.0.3/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.florent37/davincidaemon/1.0.3/66608c1658fc03a20703e02e2ca6a0bdb3dc9c75/davincidaemon-1.0.3-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="davinci-1.0.3">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wear/build/intermediates/exploded-aar/com.github.florent37/davinci/1.0.3/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/wear/build/intermediates/exploded-aar/com.github.florent37/davinci/1.0.3/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.florent37/davinci/1.0.3/6a964b8241b1e4dacec367c11acd45c736667153/davinci-1.0.3-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
