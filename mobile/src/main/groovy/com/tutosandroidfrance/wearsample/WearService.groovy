@@ -33,8 +33,8 @@ public class WearService extends EmmetWearableListenerService implements Smartph
         def slurper = new JsonSlurper()
 
         def jokesList = new ArrayList()
-        4.times {
-            def randomJoke = slurper.parse(new URL("http://api.icndb.com/jokes/random"))
+        6.times {
+            def randomJoke = slurper.parse(new URL("http://api.icndb.com/jokes/random?exclude=[explicit]"))
             jokesList.add(randomJoke.getAt("value"))
         }
 

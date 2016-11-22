@@ -3,24 +3,25 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:1.2.3'
-        classpath 'org.codehaus.groovy:gradle-groovy-android-plugin:0.3.6'
+        classpath 'com.android.tools.build:gradle:2.2.2'
+        classpath 'org.codehaus.groovy:groovy-android-gradle-plugin:1.1.0'
       
     }
 }
 
+//apply plugin: 'com.android.application'
+//apply plugin: 'groovyx.grooid.groovy-android'
 apply plugin: 'com.android.application'
-apply plugin: 'groovyx.grooid.groovy-android'
-
+apply plugin: 'groovyx.android'
 
 android {
 
-    compileSdkVersion 22
-    buildToolsVersion "22.0.1"
+    compileSdkVersion 24
+    buildToolsVersion "24.0.1"
 
     defaultConfig {
-        minSdkVersion 20
-        targetSdkVersion 22
+        minSdkVersion 23
+        targetSdkVersion 24
         versionCode 1
         versionName "1.0"
         multiDexEnabled true
@@ -30,6 +31,7 @@ android {
 
     packagingOptions {
         exclude 'LICENSE.txt' // Needed by Spock/Android
+        pickFirst 'META-INF/groovy-release-info.properties'
     }
 
     lintOptions {
@@ -66,12 +68,12 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     // Wearable
     // Wearable
-    compile 'com.google.android.support:wearable:1.1.0'
-    compile "com.android.support:support-v13:22.0.0"
+    compile 'com.google.android.support:wearable:1.4.0'
+    compile "com.android.support:support-v13:24.1.0"
     // Android tools
-    compile 'com.android.support:support-v4:22.0.0'
+    compile 'com.android.support:support-v4:24.1.0'
     // Groovy version
-    compile 'org.codehaus.groovy:groovy:2.4.4:grooid'
+    compile 'org.codehaus.groovy:groovy:2.4.7:grooid'
     // Groovy Json handling
     compile ('org.codehaus.groovy:groovy-json:2.4.0-rc-1') {
         transitive = false
@@ -88,13 +90,13 @@ dependencies {
     }
 
     // play services for network functions to work to mobile app
-    compile 'com.google.android.gms:play-services-wearable:6.5.87'
+    compile 'com.google.android.gms:play-services-wearable:8.4.0'
 
     // Spock/Android
     androidTestCompile "com.andrewreitz:spock-android:1.2.1"
     androidTestCompile 'com.android.support.test:testing-support-lib:0.1'
     androidTestCompile 'com.google.dexmaker:dexmaker:1.2'
-    androidTestCompile('org.spockframework:spock-core:1.0-groovy-2.4') {
+    androidTestCompile (group: 'org.spockframework', name: 'spock-bom', version: '1.1-groovy-2.4-rc-3') {
         exclude group: 'org.codehaus.groovy'
         exclude group: 'junit'
     }
